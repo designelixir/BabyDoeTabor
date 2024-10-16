@@ -81,6 +81,7 @@ button:hover {background: #0000A3; cursor: pointer; font-weight: 800; }
 .hidden {display: none;}
 .closed {display: none;}
 
+
 .popup-teaser {height: 80vh; width: 100%;}
 video {min-height: 80vh!important;}
 
