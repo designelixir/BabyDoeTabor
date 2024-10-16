@@ -10,60 +10,127 @@
     <title>Your Page Title</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <script src="scripts/index.js"></script>
+    <script src="index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/player.style/sutro/+esm"></script>
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
+
+
     
 </head>
 
 <body>
-    <header-component data-nav="Home" id="navigation"></navigation-header>
-
+    
     <main>
+        <div id="Popup" class="closed fade-in">
+            
+            <div class="popup-teasers">
+                <div id="BabyDoe1-Teaser" class="popup-teaser hidden">
+                    <div class="popup-bar flex-center-spacebetween">
+                        <button style="opacity: 0;"></button>
+                        <h2 class="centered-text" id="popupTitle">Volume I - Horace and Augusta Teaser</h2>
+                        <button onclick="togglePopup()">X</button>
+                    </div>
+                    <media-theme-sutro>
+                        <video slot="media" src="videos/TaborVolIWebsite.mp4" playsinline crossorigin></video>
+                    </media-theme-sutro>
+                </div>
+                <div id="BabyDoe2-Teaser" class="popup-teaser hidden">
+                    <div class="popup-bar flex-center-spacebetween">
+                        <button style="opacity: 0;"></button>
+                        <h2 class="centered-text" id="popupTitle">Volume II - Elizabeth McCourt "Baby" Doe Teaser</h2>
+                        <button onclick="togglePopup()">X</button>
+                    </div>
+                    <media-theme-sutro>
+                        <video slot="media" src="videos/Tabor-Vol-II-Website.mp4" playsinline crossorigin></video>
+                    </media-theme-sutro>
+                </div>
+                <div id="BabyDoe3-Teaser" class="popup-teaser hidden">
+                    <div class="popup-bar flex-center-spacebetween">
+                        <button style="opacity: 0;"></button>
+                        <h2 class="centered-text" id="popupTitle">Volume III - Wealth, Politics and Scandal Teaser</h2>
+                        <button onclick="togglePopup()">X</button>
+                    </div>
+                    <media-theme-sutro>
+                        <video slot="media" src="videos/Tabor-Vol-III-Website.mp4" playsinline crossorigin></video>
+                    </media-theme-sutro>
+                </div>
+                <div id="BabyDoe4-Teaser" class="popup-teaser hidden">
+                    <div class="popup-bar flex-center-spacebetween">
+                        <button style="opacity: 0;"></button>
+                        <h2 class="centered-text" id="popupTitle">Volume IV - The Best of Times Demands Repentance Teaser</h2>
+                        <button onclick="togglePopup()">X</button>
+                    </div>
+                    <media-theme-sutro>
+                        <video slot="media" src="videos/Tabor-Vol-IV-Website.mp4" playsinline crossorigin></video>
+                    </media-theme-sutro>
+                </div>
+                
+            </div>
+        </div>
         <section id="mainSection">
             <div class="flex-center-center title-container">
                 <div class="reel"></div>
                 <div>
                     <h1 class="balthazar centered-text">ELIZABETH NELLIS MCCOURT "BABY DOE" TABOR</h1>
-                    <h2 class="balthazar centered-text">The <span class="underline">whole</span> story in <i>four</i>&nbsp; 60-minute award winning videos</h2>
+                    <h2 class="balthazar centered-text">The <span class="underline">whole</span> story in <i>four</i> 60-minute award winning videos</h2>
                 </div>
                 <div class="reel-reverse"></div>
             </div>
 
-            <div>
-                <div class="video-title flex-center-start box-shadow">
+            <div style="margin-bottom: 100px;">
+                <div class="video-title flex-center-start fade-in box-shadow">
                     <img src="assets/BabyDoeTaborI.jpg" alt="Baby Doe Tabor I video image"/>
                     <div>
                         <h3>Volume I - Horace and Augusta - 1830-1878</h3>
                         <p>Rare, never before published photos and "on-location" live video takes you to the original Tabor farm in Holland, Vermont and the actual building where Horace was born. Then it's on westward... Learn about Tabor's early political activities in "bleeding Kansas" and listen to Augusta talk about her 1st trip to Kansas... (quoted from her memoires)... and then into Colorado's high country.</p>
-                        <button>Click here for a short teaser</button>
+                        <button onclick="togglePopup('BabyDoe1-Teaser', 'Volume I - Horace and Augusta Teaser')">Click here for a short teaser</button>
+                    </div>
+                </div>
+
+                <div class="video-title flex-center-start fade-in box-shadow">
+                    <img src="assets/BabyDoeTaborII.jpg" alt="Baby Doe Tabor II video image"/>
+                    <div>
+                        <h3>Volume II - Elizabeth McCourt "Baby" Doe - 1854-1880</h3>
+                        <p>It was 1878 in Leadville, and Horace and Augusta were about to become millionaires overnight. However their 19 year long marriage was suffering. Meanwhile, a young blue-eyed beauty from Oshkosh, Wisconsin was also having difficulties with her brand new marriage to Harvey Doe in nearby Central City, Colorado.
+                            Learn about what would become one of the nations biggest scandals...</p>
+                            <button onclick="togglePopup('BabyDoe2-Teaser')">Click here for a short teaser</button>
+
+                    </div>
+                </div>
+
+                <div class="video-title flex-center-start fade-in box-shadow">
+                    <img src="assets/BabyDoeTaborIII.png" alt="Baby Doe Tabor III video image"/>
+                    <div>
+                        <h3>Volume III - Wealth, Politics and Scandal - 1880-1883</h3>
+                        <p>Horace and Augusta were millionaires, but their marriage was in ruins, and a blue eyed "Baby" Doe was ready to take the place of Augusta with little regard to the public scandal already taking place... but neither was Augusta ready to let go. <i>"...Now you have your Senateship which you deserted me for. And when your month is out come home... or I will come to you..."</i></p>
+                        <button onclick="togglePopup('BabyDoe3-Teaser')">Click here for a short teaser</button>
+                    </div>
+                </div>
+                <div class="video-title flex-center-start fade-in box-shadow">
+                    <img src="assets/BabyDoeTaborIV.jpg" alt="Baby Doe Tabor IV video image"/>
+                    <div>
+                        <h3>Volume IV - The Best of Times Demands Repentance - 1883-1935</h3>
+                        <p>Over the next ten years the Tabors squandered over $10,000,000.00, but then came the silver crash, and by 1898 they were destitute. Baby was left alone and penniless with her two daughters upon the death of Horace in 1898. Both daughters eventually left their mother in Leadville, living alone in the supply shack at the Matchless Mine in a self-imposed solitude until her death in 1935.</p>
+                        <button onclick="togglePopup('BabyDoe4-Teaser')">Click here for a short teaser</button>
                     </div>
                 </div>
             </div>
-
+            
 
             
             <!-- Add your main content here -->
         </section>
-        <div id="Popup">
-            <div class="popup-bar flex-center-spacebetween">
-                <button style="opacity: 0;"></button>
-                <h2 class="centered-text">Volume I - Horace and Augusta Teaser</h2>
-                <button>X</button>
-
-            </div>
-            <div id="BabyDoe1-Teaser" class="popup-teaser">
-                
-            </div>
-
+        <div class="sticky-bar centered-text">
+            <h3>ALL VOLUMES ARE AVAILABLE FOR PURCHASE ON <a style="background-color: gold; border-radius: 5px; padding: 10px; color: black;" target="_blank" href="https://coloradovideos.com">COLORADOVIDEOS.COM</a></h3>
         </div>
     </main>
-
-    <footer-component></footer-component>
+    
 </body>
+
 
 </html>

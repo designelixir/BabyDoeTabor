@@ -3,9 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Balthazar&display=swap');
 
 html {max-width: 100vw; overflow-x: hidden; background-image: url('assets/texture.png'); background-size: cover; background-position: fixed;}
-body {width: 100%; margin: 0px; backdrop-filter: blur(3px); min-height: 100vh;}
+body {width: 100%; margin: 0px; backdrop-filter: blur(3px); }
 section {padding: 25px;}
-
 :root {
     --gold: #FADD60;
     --font: 'Arial', sans-serif;
@@ -68,17 +67,26 @@ button:hover {background: #0000A3; cursor: pointer; font-weight: 800; }
 .underline {text-decoration: underline;}
 
 /* Homepage */
-.reel {border: 1px solid lime; min-width: 150px; background-image: url('assets/reel.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 150px; width: 150px;}
-.reel-reverse {border: 1px solid lime; min-width: 150px; background-image: url('assets/reel-reverse@300x.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 150px; width: 150px;}
+.reel { min-width: 150px; background-image: url('assets/reel.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 150px; width: 150px;}
+.reel-reverse {min-width: 150px; background-image: url('assets/reel-reverse@300x.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 150px; width: 150px;}
 
-.video-title {background: white; padding: 15px; border-radius: 10px;}
+.video-title {background: white; padding: 25px; border-radius: 10px; margin-bottom: 15px;}
 .video-title img {max-width: 300px; margin-right: 25px; border: 1px solid black;}
 
 /* Popup */
-#Popup {width: 100vw; height: 100vh; backdrop-filter: blur(5px); background: rgba(255,255,255,0.5); position: fixed; top: 0; left: 0; z-index: 3; padding: 25px;}
-.popup-teaser {height: 80vh; width: 100%; border: 1px solid red;}
+#Popup {width: 100vw; height: 100vh; backdrop-filter: blur(5px); background: rgba(255,255,255,0.5); position: sticky;
+    top: 0; /* Start at the center vertically */
+    left: 0; /* Start at the center horizontally */
+    z-index: 3; padding: 25px; }
+.hidden {display: none;}
+.closed {display: none;}
 
+.popup-teaser {height: 80vh; width: 100%;}
+video {min-height: 80vh!important;}
 
+/* sticky bar */
+.sticky-bar {position: sticky; bottom: 0; left: 0; background: navy; padding: 15px; width: 100%;}
+.sticky-bar h3 {color: white;}
 #designElixirCredits {text-decoration: none; font-size: 12px; color: black;}
 
 @media screen and (max-width: 850px) {
@@ -86,8 +94,10 @@ button:hover {background: #0000A3; cursor: pointer; font-weight: 800; }
   h2 {font-size: 24px; line-height: 28px;}
   .title-container {flex-direction: column;}
   .reel-reverse {display: none;}
+  .video-title {align-items: start; justify-content: start; flex-direction: column;}
+  .video-title img {max-width: unset; width: 100%;}
 }
 
-.fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both}
+.fade-in{-webkit-animation:fade-in 0.5s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 0.5s cubic-bezier(.39,.575,.565,1.000) both}
 @-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
 
