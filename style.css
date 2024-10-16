@@ -1,0 +1,93 @@
+* {box-sizing: border-box;}
+
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&display=swap');
+
+html {max-width: 100vw; overflow-x: hidden; background-image: url('assets/texture.png'); background-size: cover; background-position: fixed;}
+body {width: 100%; margin: 0px; backdrop-filter: blur(3px); min-height: 100vh;}
+section {padding: 25px;}
+
+:root {
+    --gold: #FADD60;
+    --font: 'Arial', sans-serif;
+}
+
+.flex-center-center {display: flex; align-items: center; justify-content: center; flex:1}
+.flex-center-end {display: flex; align-items: center; justify-content: flex-end; flex:1}
+.flex-center-start {display: flex; align-items: center; justify-content: flex-start; flex:1}
+.flex-center-spacebetween {display: flex; align-items: center; justify-content: space-between; flex:1}
+.flex-center-spaceevenly {display: flex; align-items: center; justify-content: space-evenly; flex:1}
+
+.flex-start-center {display: flex; align-items: flex-start; justify-content: center; flex:1}
+.flex-start-start {display: flex; align-items: flex-start; justify-content: flex-start; flex:1;}
+.flex-start-end {display: flex; align-items: flex-start; justify-content: flex-end; flex:1;}
+.flex-start-spacebetween {display: flex; align-items: flex-start; justify-content: space-between; flex:1;}
+.flex-start-spaceevenly {display: flex; align-items: flex-start; justify-content: space-evenly; flex:1;}
+
+.flex-end-center {display: flex; align-items: flex-end; justify-content: center; flex:1;}
+.flex-end-start {display: flex; align-items: flex-end; justify-content: flex-start; flex:1;}
+.flex-end-end {display: flex; align-items: flex-end; justify-content: flex-end; flex:1;}
+.flex-end-spacebetween {display: flex; align-items: flex-end; justify-content: space-between; flex:1;}
+.flex-end-spaceevenly {display: flex; align-items: flex-end; justify-content: space-evenly; flex:1;}
+
+
+.flex-column {flex-direction: column;}
+.flex-wrap {flex-wrap: wrap}
+.no-flex-grow {flex: unset;}
+
+* {font-family: 'Raleway', sans-serif;}
+  
+
+h1 {font-size: 48px; line-height: 52px;
+    font-family: "Balthazar", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2, h2 * {font-size: 28px; line-height: 32px;
+    font-family: "Balthazar", serif;
+    font-weight: 400;
+    font-style: normal;}
+
+h3 {font-size: 22px; line-height: 22px;
+    font-family: "Balthazar", serif;
+    font-weight: 900;
+    font-style: normal;}
+p {font-family: 'Raleway', sans-serif; font-weight: 500;}
+button {
+    font-family: 'Raleway', sans-serif; border: 0px; border-radius: 4px;
+    background: navy; color: white; text-transform: uppercase; padding: 10px;
+}
+button:hover {background: #0000A3; cursor: pointer; font-weight: 800; }
+
+.hover:hover {cursor: pointer; transform: scale(1.05);}
+.hover {cursor: pointer;}
+.box-shadow {box-shadow: 2px 2px 2px rgba(0,0,0,0.5);}
+.text-shadow {text-shadow: 0 0 2px rgba(0,0,0,0.5);}
+.centered-text {text-align: center;}
+.active-link {text-decoration: underline;}
+.underline {text-decoration: underline;}
+
+/* Homepage */
+.reel {border: 1px solid lime; min-width: 150px; background-image: url('assets/reel.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 150px; width: 150px;}
+.reel-reverse {border: 1px solid lime; min-width: 150px; background-image: url('assets/reel-reverse@300x.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 150px; width: 150px;}
+
+.video-title {background: white; padding: 15px; border-radius: 10px;}
+.video-title img {max-width: 300px; margin-right: 25px; border: 1px solid black;}
+
+/* Popup */
+#Popup {width: 100vw; height: 100vh; backdrop-filter: blur(5px); background: rgba(255,255,255,0.5); position: fixed; top: 0; left: 0; z-index: 3; padding: 25px;}
+.popup-teaser {height: 80vh; width: 100%; border: 1px solid red;}
+
+
+#designElixirCredits {text-decoration: none; font-size: 12px; color: black;}
+
+@media screen and (max-width: 850px) {
+  h1 {font-size: 36px; line-height: 40px;}
+  h2 {font-size: 24px; line-height: 28px;}
+  .title-container {flex-direction: column;}
+  .reel-reverse {display: none;}
+}
+
+.fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both}
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+
